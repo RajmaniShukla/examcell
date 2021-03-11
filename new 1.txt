@@ -1,0 +1,46 @@
+if(isset($_POST['submit']))
+	  {
+	 $file=$_FILES['file'];
+	   $file_name=$_FILES['file']['name'];
+	  $file_size=$_FILES['file']['size'];
+	  $file_tmp=$_FILES['file']['tmp_name'];
+	  $file_error=$_FILES['file']['error'];
+	  $file_type=$_FILES['file']['type'];
+	  $file_ext=explode('.',$file_name);
+	  $actualfile_extension=strtolower(end($file_ext));
+      $allowed=array("JPEG","JPG","PNG","GIF","pdf");
+	  if(in_array($actualfile_extension,$allowed))
+	  {
+		if($file_error===0)
+		{
+		 if($file_size<1000000)
+		 {
+			 $file_name_new=uniqid('',true).".".$actualfile_extension;
+			 $file_destination='uploads/'.$file_name_new;
+			 move_uploaded_file($file_tmp,$file_destination);
+		 }
+        else
+         echo"your file is too big";		
+		}
+    else
+     echo"there was an error to uploading your file";
+	  }
+	  else
+		echo"you can not upload file of this type"; 
+  }
+	  }
+	  
+	  
+	  
+	  <tr><th>E-MAIL <strong>:</strong> </th><td width="500"height="70"><?php echo ($row['email']);?></td></tr>
+		<tr><th>E-MAIL <strong>:</strong> </th><td width="500"height="70"><?php echo ($row['email']);?></td></tr>
+         <tr><th>MOBILE-NO <strong>:</strong> </th><td width="500"height="70"colspan="2"><?php echo ($row['mobile']);?></td></tr>
+		 <tr><th>ROLL-NO <strong>:</strong> </th><td width="500"height="70"colspan="2"><?php echo ($row['roll_no']);?></td></tr>
+		 
+		 
+		 
+		 
+		 public function connect()  {}
+  public function disconnect()  {}
+  public function select()      {}
+  public function insert()      {}

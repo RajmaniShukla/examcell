@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+  <html>
+  <head><title>login form</title>
+  <link href="login.css"rel="stylesheet"/>
+  <script type="text/javascript">
+  function validate_register()
+  {
+	   var flag=true;
+	   var teacher_id=document.getElementById('teacher_id').value;
+	   var tid=/^[a-zA-Z0-9_*+&$]+$/;
+        if(teacher_id!="")
+		 {
+		 if(!rn.test(teacher_id))
+		 {
+		 flag=false;
+		 document.getElementById('teacher_id_err').innerHTML ='*invalid pattern';
+		 document.getElementById('teacher_id').style.border='1px color:red';
+		 }
+		 else
+		 {
+		 document.getElementById('teacher_id_err').innerHTML='';
+		 document.getElementById('teacher_id').style.border='';
+		 }
+		 }
+		 else
+		 {
+		 flag=false;
+		 document.getElementById('teacher_id_err').innerHTML ='*Roll-no is required';
+		 document.getElementById('teacher_id').style.border='1px color:red';
+		}
+		var password=document.getElementById('password').value;
+		 var pp=/^[a-zA-Z0-9_*+&$]+$/;
+        if(password!="")
+		 {
+		 if(!pp.test(password))
+		 {
+		 flag=false;
+		 document.getElementById('password_err').innerHTML ='*invalid pattern';
+		 document.getElementById('password_err').style.border='1px color:red';
+		 }
+		 else 
+		 {
+		 document.getElementById('password_err').innerHTML ='';
+		 document.getElementById('password_err').style.border='';
+		 }
+		 }
+		 else
+		 {
+		 flag=false;
+		 document.getElementById('password_err').innerHTML ='*password is required';
+		 document.getElementById('password_err').style.border='1px color:red';
+		 }
+		 return flag;
+   }
+	  </script>
+	  </head>
+	  <body>
+	  
+	  <div id="d1">
+            <div id="header">
+                <center><h1>RAJARSHI RANANJAY SINH INSITITUITE OF MANAGEMENT&TECHNOLOGY</h1></center>
+                <label>MUNSHIGANJ   District - Amethi ( U.P )</label>
+           </div>  
+		  </div>		  
+	 <div id="form" align="center">
+	    <form method="POST" action="teacher_login.php" onsubmit="return validate_register();" align="center"/>
+		<h1 align="center">Login Form</h1>
+	     <strong>Teacher-Id :</strong><input type="text" align="center" name="teacher_id"id="teacher_id" placeholder="enter the id"/><span id="teacher_id_err"style="color:red;position:fixed"></span><br><br>
+		 <strong> Password :</strong><input type="password"align="center"name="password"id="password"placeholder="enter the password"/><span id="password_err"style="color:red;position:fixed"></span><br><br>
+	    <input type="submit"name="login"value="login"/>
+	   </form> 
+	 </div>  
+	   </body>
+
+</html>

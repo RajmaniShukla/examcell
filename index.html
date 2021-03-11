@@ -1,0 +1,68 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css"  />
+        <link rel="stylesheet" href="css/menu.css"  />
+        <script>
+            var i=0;
+            var imglist=["1.jpg","2.jpg","3.jpg","4.jpg"];
+            function moveSlider()
+            {
+                document.getElementById("slide").src="image/"+imglist[i];
+                i++;
+                if(i===imglist.length)
+                {
+                    i=0;
+                }
+                window.setTimeout("moveSlider()",2000);
+            }
+        </script>
+    </head>
+    <body onload="moveSlider()" >
+    <div id="outer">    
+        <div id="header">
+            <div id="logo">
+            </div>
+            <div id="banner">
+                 <center><h1>RAJARSHI RANANJAY SINH INSTITUTE OF MANAGEMENT AND TECHNOLOGY</h1></center>
+                    <label>MUNSHIGUNJ-AMETHI</label>
+            </div>
+        </div>
+          <div id="menu">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="services.jsp">Service</a></li>
+                    <li id="reg"><a href="registration.jsp">Registration</a>
+						<ul>
+							<li class="drop_down"><a href="teacher.html">Teacher Registration</a></li>
+							<li class="drop_down"><a href="student.html">Student Registration</a></li>
+						</ul>
+					</li>
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="enquiry.jsp">Enquiry</a></li>
+                </ul>
+                
+            </div>
+        <div id="main">
+        </div>
+        
+            <div id="slider">
+                <img id="slide"/ width=1000px;  height=250px; >
+                </div>
+        <div id="empty">
+        </div>
+                 <div id="footer">
+                     <div id="lfooter">
+                         <center><h1 style="color: white">Online Marks</h1></center>
+                         </div>
+                     <div id="rfooter">
+                         <center><h1 style="color: white">RRSIMT</h1></center>
+                     </div>
+                 </div>
+      
+        
+        </div>
+		
+		
+    </body>
+</html>
+

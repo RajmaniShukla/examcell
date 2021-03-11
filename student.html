@@ -1,0 +1,114 @@
+
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css"/>
+        <link rel="stylesheet" href="css/menu.css"/>
+        <script>
+            var i=0;
+            var imglist=["1.jpg","2.jpg","3.jpg","4.jpg"];
+            function moveSlider()
+            {
+                document.getElementById("slide").src="image/"+imglist[i];
+                i++;
+                if(i===imglist.length)
+                {
+                    i=0;
+                }
+                window.setTimeout("moveSlider()",2000);
+            }
+        </script>
+    </head>
+    <body onload="moveSlider()">
+            
+        <div id="outer">
+            <div id="header">
+                <div id="logo">
+                </div>
+                <div id="banner">
+                    <center><h1>RAJARSHI RANANJAY SINH INSTITUTE OF MANAGEMENT AND TECHNOLOGY</h1></center>
+                      <label>MUNSHIGUNJ-AMETHI</label>
+                </div>
+            </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.jsp">HOME</a></li>
+                    <li><a href="services.jsp">Service</a></li>
+                    <li><a href="registration.jsp">Registration</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="enquiry.jsp">Enquiry</a></li>
+                </ul>
+                
+            </div>
+             <div id="main">
+            </div>
+            <div id="slider">
+                <img id="slide" width="1000" height="250"/>
+                </div>
+           
+            <div id="empty">
+                <center>
+			         <table>
+                     <h2>Student Registration</h2>
+					 </table>
+                
+			    <form method="POST" action="student.php">
+                            Student-Name &nbsp
+                           <input required="true" type='text' name='name'style="height:25px;width:200px"/><br><br>
+                            Father-Name  &nbsp&nbsp
+                           <input required="true" type='text' name='father_name'style="height:25px;width:200px;"/><br><br>
+                            DOB :
+                            <input required="true" type='date' name="dob"style="height:25px;width:200px;"><br><br>
+                            Gender :
+                            <input required="true" type='radio' name='gender' value='male'>Male 
+                            <input required="true" type='radio' name='gender' value='female'>Female <br><br>
+							Year  :
+							<select required="true" name="year">
+                                <option disabled>year</option>
+                                        <option>1st</option>
+                                          <option>2nd</option>
+                                            <option>3rd</option>
+                                              <option>4th</option>
+                                    </select><br><br>
+									Branch :
+                               <select required="true" name="branch">
+								       <option disabled>branch</option>
+                                   <option>CSE</option>
+                                          <option>ECE</option>
+                                            <option>EN</option>
+                                              <option>ME</option>
+											   <option>IT</option>
+                                    </select> <br><br>
+                                Contact-No : 
+                                <input required="true" type='tel' name='mobile'style="height:25px;width:200px;"/><br><br>
+                                Email  :
+                               <input required="true" type='email' name='email'style="height:25px;width:200px;"/><br><br>
+							   Roll-No :
+                               <input required="true" type='tel' name='roll_no'style="height:25px;width:200px;"/><br><br>
+                                Password  :
+                                <input required="true" type='password' name='password'style="height:25px;width:200px;"/><br><br>
+                                Address :
+                                <input type="text" required="true" name="address" style="height:25px;width:200px;"/><br><br>
+                                <input  type='submit' value='Submit' name="submit" style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20px;"></td>
+                                <input  type="reset" value="Reset" style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20px"/>
+								</form>
+            </center>
+            </div>
+        </div>
+				
+                 <div id="footer">
+                     <div id="lfooter">
+                         <center> <h1 style="color: white">Online Marks</h1></center>
+                         </div>
+                     <div id="rfooter">
+                         <center>    <h1 style="color: white">RRSIMT</h1> </center>
+                         
+                     </div>
+                 </div>
+        
+        
+        
+                
+        
+    </body>
+</html>
+

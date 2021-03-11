@@ -1,0 +1,58 @@
+#outer{
+    position: relative;
+    top:117px;
+    left: 4.5%;
+    width: 70%;
+}
+#d2
+{
+    position:relative;
+    height:150px;
+    width:73%;
+    margin:0;
+    padding:0;
+    top:-16px;
+    left:190px;
+    background: linear-gradient(#1822B5,#95B3C0,#0C33C5);
+}
+#d2 h1
+{
+    position:relative;
+    font-size:50px;
+    left: 1x;
+    font-family: Algerian;
+}
+#d2 h2
+{
+    position: relative;
+    top: -30px;
+     font-size:40px;
+    font-family: Algerian;
+}
+#form
+{ 
+  position:relative;
+    height:800px;
+    width:971px;
+    margin:0;
+    padding: 0;
+    left:190px;
+    top: -16px;
+	background-color:#D5CDEE;
+}
+#marquee
+{
+    position:relative;
+    top: -30px;
+    height:20px;
+    width: 73%;
+    left: 190px;
+}
+#form #adjust
+{
+    position: absolute;
+    height: 800px;
+    left: 300px;
+    top: 10px;
+    
+}

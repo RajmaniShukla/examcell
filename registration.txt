@@ -1,0 +1,115 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css"  />
+        <link rel="stylesheet" href="css/menu.css"  />
+        <script>
+            var i=0;
+            var imglist=["1.jpg","2.jpg","3.jpg","4.jpg"];
+            function moveSlider()
+            {
+                document.getElementById("slide").src="images/"+imglist[i];
+                i++;
+                if(i===imglist.length)
+                {
+                    i=0;
+                }
+                window.setTimeout("moveSlider()",2000);
+            }
+        </script>
+    </head>
+    <body onload="moveSlider()">
+        <form>
+            <center>
+        <div id="outer">
+            <div id="header">
+                <div id="logo">
+                  
+                </div>
+                <div id="banner">
+                     
+                </div>
+                </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.jsp">HOME</a></li>
+                    <li><a href="services.jsp">Service</a></li>
+                    <li><a href="registration.jsp">Registration</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="enquiry.jsp">Enquiry</a></li>
+                </ul>
+                
+            </div>
+            <div id="slider">
+                <img id="slide" width="1000" height="180"/>
+                </div>
+            <div id="main">
+                <center>
+                  <table>
+                     <h2>Teacher Registration</h2>
+                        <tr style="font-size: 25px;">
+                            <td>Teacher Name</td>
+                            <td><input required="true" type='text' name='name'style="height:25px;width:200px;"/></td>
+                        </tr>
+                        <tr style="font-size: 25px;">
+                            <td>Gender</td>
+                            <td><input required="true" type='radio' name='gender' value='male'>Male
+                                <input required="true" type='radio' name='gender' value='female'>Female
+                            </td>
+                            </tr>
+                            <tr style="font-size: 25px;">
+                                <td>Address</td>
+                                <td><textarea required="true" name="address" style="height:25px;width:200px;"></textarea></td>
+                            </tr>
+                           
+                            <tr style="font-size: 25px;">
+                                <td>Qualification</td>
+                                <td><select required="true" name="qualification">
+                                        <option>B-tech</option>
+                                          <option>M-tech</option>
+                                            <option>B.Sc</option>
+                                              <option>M.Sc</option>
+                                    </select></td>
+                                
+                            </tr>
+                           
+                            <tr style="font-size: 25px;">
+                                
+                                <td> Contact No.</td>
+                                <td><input required="true" type='number' name='contactno'style="height:25px;width:200px;"></td>
+                            </tr>
+                            <tr style="font-size: 25px;">
+                                <td>Email Address</td>
+                                <td><input required="true" type='text' name='email'style="height:25px;width:200px;"></td>
+                            </tr>
+                            
+                            <tr style="font-size: 25px;">
+                                <td>User Name</td>
+                                <td><input required="true" type='text' name='user'style="height:25px;width:200px;"></td>
+                            </tr>
+                            <tr style="font-size: 25px;">
+                                <td>Password</td>
+                                <td><input required="true" type='password' name='password'style="height:25px;width:200px;"></td>
+                            </tr>
+                           
+                            <tr style="font-size: 25px;">
+                                <td></td>
+                                <td><input required="true" type='submit' value='Submit'  style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20px;"></td>
+                                <td><input  type="reset" value="Reset" style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20px;"/>
+                            </tr>
+                        </table>
+                </center>
+            </div>
+                 <div id="footer">
+                     <div id="lfooter">
+                         <h2 style="color: white">Online Marks</h2>
+                         </div>
+                     <div id="rfooter">
+                         <h2 style="color: white">RRSIMT</h2> 
+                     </div>
+                 </div>
+        </div>
+                </center>
+            </form>
+    </body>
+</html>
+

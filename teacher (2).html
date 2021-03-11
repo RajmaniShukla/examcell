@@ -1,0 +1,103 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="css/style.css"  />
+        <link rel="stylesheet" href="css/menu.css"  />
+        <script>
+            var i=0;
+            var imglist=["1.jpg","2.jpg","3.jpg","4.jpg"];
+            function moveSlider()
+            {
+                document.getElementById("slide").src="image/"+imglist[i];
+                i++;
+                if(i===imglist.length)
+                {
+                    i=0;
+                }
+                window.setTimeout("moveSlider()",2000);
+            }
+        </script>     
+    </head>
+    <body onload="moveSlider()">
+            <center>
+        <div id="outer">
+            <div id="header">
+                <div id="logo">
+                  
+                </div>
+                <div id="banner">
+                     
+                </div>
+                </div>
+            <div id="menu">
+                <ul>
+                    <li><a href="index.jsp">HOME</a></li>
+                    <li><a href="services.jsp">Service</a></li>
+                    <li><a href="registration.jsp">Registration</a></li>
+                    <li><a href="login.jsp">Login</a></li>
+                    <li><a href="enquiry.jsp">Enquiry</a></li>
+                </ul>
+                
+            </div>
+            <div id="slider">
+                <img id="slide" width="1000" height="250"/>
+                </div>
+            <div id="main">
+			 <center>
+				<table>
+                    <h1> Teacher Registration </h1>
+                    </table>   
+			<form method="POST"action="teacher.php">
+			        Teacher-id:
+                                <input required="true" type='text' name='teacher_id'style="height:25px;width:200px;"><br><br>
+                   Teacher-Name :
+                            <input required="true" type='text' name='name'style="height:25px;width:200px;"/><br><br>
+							DOB :
+                          <input required="true" type='date' name='dob'style="height:25px;width:200px;"/><br><br>
+                          Department:
+                              <select required="true" name="department">
+                                        <option>CSE</option>
+                                          <option>ECE</option>
+                                            <option>EN</option>
+                                              <option>ME</option>
+											  <option>IT</option>
+											  <option>CIVIL</option>
+                                    </select><br><br>
+                      Qualification:
+                                <select required="true" name="qualification">
+                                        <option>B-tech</option>
+                                          <option>M-tech</option>
+                                            <option>B.Sc</option>
+                                              <option>M.Sc</option>
+                                    </select><br><br>
+						Gender:
+                           <input required="true" type='radio' name='gender' value='male'>Male
+                           <input required="true" type='radio' name='gender' value='female'>Female
+						   <input required="true" type='radio' name='gender' value='female'>Transgender <br><br>
+                          Contact-No:
+                                <input required="true" type='tel' name='mobile'style="height:25px;width:200px;"><br><br>
+                               Email:
+                                <input required="true" type='text' name='email'style="height:25px;width:200px;"><br><br>
+                          
+                            Password:
+                                <input required="true" type='password' name='password'style="height:25px;width:200px;"><br><br>
+                             Address:
+                                <textarea required="true" name="address" style="height:25px;width:200px;"></textarea><br><br><br>
+                                <input required="true" type='submit' value='Submit'name='submit'style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20px;"/>&nbsp&nbsp&nbsp
+                                <input  type="reset" value="Reset" style="height:25px;width:100px; background-color:blue;color:white;font-family:Monotype Corsiva;font-size:20">
+						</form>
+						 </center>
+            </div>
+                 <div id="footer">
+                     <div id="lfooter">
+                         <h2 style="color: white">Online Marks</h2>
+                         </div>
+                     <div id="rfooter">
+                         <h2 style="color: white">RRSIMT</h2> 
+                     </div>
+                 </div>
+        </div>
+                </center>
+            
+    </body>
+</html>
+

@@ -1,0 +1,152 @@
+#d1 
+{
+   position:relative;
+   left:80px;
+   width:1200px;
+   height:2900px;
+   background-color:black;
+}
+#d1 #d2
+{
+position:relative;
+
+width:1200px;
+height:100px;
+background-color:#990000;
+}
+#d2 #logo
+{
+	position:absolute;
+	width:199px;
+	height:145px;
+	background-color:gray;
+}
+ #sliderbox
+{position:absolute;
+top:0px;
+left:199px;
+	width:1000px;
+	overflow:hidden;
+}
+ #slider
+{
+	position:relative;
+	width:4000px;
+    animation-name: slider;
+    animation-duration: 20s;
+    animation-timing-function: initial;
+    animation-delay: initial;
+    animation-iteration-count: infinite;
+    animation-direction: initial;
+    animation-fill-mode: initial;
+    animation-play-state: initial;
+}
+#slider img
+{
+	float:left;
+}
+@keyframes slider
+{
+	0% {
+    left: 0;
+}
+20% {
+    left: 0;
+}
+25% {
+    left: -1000px;
+}
+45% {
+    left: -1000px;
+}
+50% {
+    left: --2000px;
+}
+70% {
+    left: -2000px;
+}
+75% {
+    left: -3000px;
+}
+
+95% {
+    left: -3000px;
+}
+100% {
+    left: -4000px;
+}
+}
+ #marquee1
+{
+	position:absolute;
+    top:-50px;
+	left:199px;
+	background-color:#33FF33;
+}	
+#d1 #marquee2
+{
+	position:absolute;
+	top:-30px;
+	top:-50px;
+	left:450px;
+}
+
+#d1 #quote
+{
+	background-image:img6.jpg;
+	position:absolute;
+	top:145px;
+	width:199px;
+	height:556px;
+}
+#d1 #quote #home
+{
+	float:left;
+	
+	z-index:999;
+	position:relative;
+	top:145px;
+	width:199px;
+	height:560px;
+}
+#quote
+{
+	background-image:url("img6.jpg");
+	
+}
+#d1 ul
+{ 
+    position:relative;
+    margin: 0px;
+    padding: 0px;
+}
+#d1 ul li
+{
+    position:relative;
+    background-color: darkslateblue;
+    width:100%;
+    top:-145px;
+    height:68px;
+    line-height: 68px;
+    border: 1px solid black;
+    text-align: center;
+}
+ #d1 ul li a
+{   
+    color: white;
+    text-decoration: none;
+    display:block;
+}
+#d1 ul li a:hover
+{
+    background-color: red;
+}
+#d1 ul li ul li 
+{  
+    background-color: chartreuse;
+    display: none;
+}
+#d1 ul li:hover ul li
+{
+    display:block;
+}
